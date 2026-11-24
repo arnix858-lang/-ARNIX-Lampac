@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: arnix-lampac
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /version?type=hash
+    autoDeploy: true
