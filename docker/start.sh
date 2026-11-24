@@ -9,7 +9,7 @@ export DOTNET_GCConserveMemory=9
 export DOTNET_gcServer=0
 export DOTNET_EnableDiagnostics=0
 
-PORT_VALUE="${PORT:-9118}"
+PORT_VALUE="${PORT:-10000}"
 sed "s/__PORT__/${PORT_VALUE}/g" /opt/arnix/init.template.conf > /lampac/init.conf
 
 echo "ARNIX-Lampac starting on port ${PORT_VALUE} (conservative .NET memory mode)"
