@@ -8,5 +8,8 @@ COPY config/init.template.conf /opt/arnix/init.template.conf
 
 RUN chmod +x /opt/arnix/start.sh
 
+# Render routes HTTP traffic to the default web-service port.
+EXPOSE 10000
+
 USER lampac
 ENTRYPOINT ["/bin/sh", "/opt/arnix/start.sh"]
