@@ -8,3 +8,8 @@ services:
     dockerContext: .
     healthCheckPath: /version?type=hash
     autoDeploy: true
+    envVars:
+      - key: ALLOHA_TOKEN
+        sync: false
+      - key: ALLOHA_SECRET_TOKEN
+        sync: false
